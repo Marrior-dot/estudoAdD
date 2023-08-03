@@ -36,4 +36,14 @@ del titanic_train["PassengerId"]
 #Variáveis que agrupam de maneira numérica ou categórica, são úteis para a análise
 #manter algumas variáveis que possam identicar cada elemento unicamente
 
- 
+del titanic_train["Ticket"] 
+#As variáveis PassengerId e Ticket foram retiradas por não
+#representarem significância para a análise preditiva
+
+#3. Devo tranformar alguma variável
+#modificar algumas variáveis para que os seus elementos estejam mais de 
+#acordo com o que essas representam
+
+new_survived = pd.DataFrame(data=titanic_train["Survived"])
+print(new_survived)
+print(new_survived.describe())
